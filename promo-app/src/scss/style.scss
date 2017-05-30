@@ -1,0 +1,1096 @@
+$gray: #3e3e3e;
+$gray-2: #3a3a39;
+$gray-3: #323232;
+$gray-alpha: rgba(62,62,62,.8);
+$hover-color: #25c991;
+$red: #e03046;
+$yellow: #ffde00;
+$muted-blue: #135c9f;
+$hover-blue: #11adf0;
+$blue: #007ddd;
+$blue-2: #78bcff;
+$blue-3: #337ab7;
+$text-color: #ffffff;
+$img: "../img";
+$main-width: 1300px;
+$font-normal: 14px;
+$font-nav: 16px;
+$small-screen: 1024px;
+$small-height: 768px;
+$small-imac-width: 1920px;
+
+
+body {
+    background: black;
+    font-family: 'Microsoft Yahei', sans-serif;
+    color: $text-color;
+    section {
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+    // begin common items
+    .button {
+        background-image: url(#{$img}/btn-download-main.png);
+        background-repeat: no-repeat;
+        width: 399px;
+        height: 50px;
+        margin-bottom: 40px;
+        cursor: pointer;
+        @media screen and (max-height: $small-height) {
+            margin-bottom: 30px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            li {
+                display: inline-block;
+                &.btn-left {
+                    width: 198px;
+                    height: 48px;
+                    float: left;
+                    img {
+                        visibility: hidden;
+                    }
+                }
+                &.btn-right {
+                    width: 198px;
+                    height: 48px;
+                    float: left;
+                    img {
+                        margin-left: 2px;
+                        visibility: hidden;
+                    }
+                }
+            }
+        }
+    }
+    // end common items
+    #phoneApp {
+        background-image: url(#{$img}/bg-app.jpg);
+        overflow: hidden;
+        .container-hl8 {
+            position: relative;
+            #section1bg {
+                background-image: url(#{$img}/app-iphone.png);
+                position: absolute;
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 875px;
+                height: 851px;
+                top: 120px;
+                left: -145px;
+                top: 170px;
+                width: 55%;
+                left: 0;
+                display: none;
+                @media screen and (max-width: $small-imac-width) and (max-height: $small-height) {
+                    width: 50%;
+                    left: 50px;
+                    top: 110px;
+                }
+                @media screen and (max-width: $small-screen) and (max-height: $small-height) {
+                    width: 45%;
+                    top: 110px;
+                    left: -50px;
+                }
+            }
+            .section1 {
+                position: absolute;
+                width: 400px;
+                top: 208px;
+                right: 162px;
+                display: none;
+                @media screen and (max-width: $small-imac-width) and (max-height: $small-height) {
+                    top: 120px;
+                }
+                @media screen and (max-width: $small-screen) {
+                    width: 30%;
+                    margin-top: 10px;
+                    right: 330px;
+                }
+                h1 {
+                    margin: 0 0 20px 0;
+                    text-align: center;
+                    font-size: 46px;
+                    color: $text-color;
+                    font-weight: lighter;
+                    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.39); 
+                }
+                .qrcodes {
+                    display: inline-block;
+                    width: 383px;
+                    margin-left: 8px;
+                    ul {
+                        padding: 0;
+                        li {
+                            display: inline-block;
+                            width: 177px;
+                            height: 165px;
+                            padding-top: 23px;
+                            background: rgba(0, 0, 0, 0.30);
+                            @media screen and (max-width: $small-screen) {
+                                height: 145px;
+                            }
+                            &:nth-child(2),&:nth-child(4) {
+                                margin-left: 24px;
+                            }
+                            &:nth-child(3), &:nth-child(4) {
+                                margin-top: 25px;
+                            }
+                            img {
+                                padding-left: 23px;
+                                @media screen and (max-width: $small-screen) {
+                                    padding-left: 43px;
+                                    width: 70%;
+                                }
+                            }
+                            a  {
+                                color: $text-color;
+                                &:hover {
+                                    color: $hover-color;
+                                    text-decoration: none;
+                                }
+                            }
+                            .qrdesc {
+                                background-color: $gray-2;
+                                background-image: url(#{$img}/img-dl-cloud.png);
+                                background-repeat: no-repeat;
+                                background-position-x: 10px;
+                                background-position-y: 5px;
+                                line-height: 30px;
+                                display: inline-block;
+                                width: 177px;
+                                height: 31px;
+                                padding-left: 40px;
+                                color: $text-color;
+                                margin-top: 9px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #mobileWeb {
+        background-image: url(#{$img}/bg-mobileWeb.jpg);
+        overflow: hidden;
+        .container-hl8 {
+            position: relative;
+            #section2bg {
+                background-image: url(#{$img}/mobile-phone.png);
+                position: absolute;
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 517px;
+                height: 659px;
+                right: 153px;
+                top: 207px;
+                display: none;
+                @media screen and (max-width: $small-imac-width) and (max-height: $small-height) {
+                    width: 30%;
+                }
+                @media screen and (max-width: $small-screen) {
+                    width: 30%;
+                    top: 150px;
+                    right: 330px;
+                }
+            }
+            .section2 {
+                display: none;
+                width: 450px;
+                margin-top: 166px;
+                margin-left: 70px;
+                color: #000;
+                @media screen and (max-width: $small-imac-width) and (max-height: $small-height) {
+                    margin-top: 85px;
+                }
+                @media screen and (max-width: $small-screen) {
+                    margin-top: 90px;
+                    margin-left: 10px;
+                }
+                img {
+                    margin: 0 auto;
+                    display: block;
+                }
+                h2 {
+                    margin-top: 25px;
+                    margin-left: 80px;
+                    margin-bottom: 10px;
+                    @media screen and (max-width: $small-imac-width) and (max-height: $small-height) {
+                        margin-left: 90px;
+                    }
+                    @media screen and (max-width: $small-screen) {
+                        text-align: center;
+                        margin-left: 0;
+                        margin-top: 10px;
+                    }
+                }
+                h3 {
+                    margin-left: 80px;
+                    margin-top: 40px;
+                    margin-bottom: 20px;
+                }
+                .button {
+                    margin-left: 80px;
+                    background-image: url(#{$img}/btn-download-main2.png);
+                    .btn-left {
+                        margin-left: -6px;
+                    }
+                    .btn-right {
+                        margin-left: -6px;
+                    }
+                }
+                .itemized {
+                    background-image: url(#{$img}/bg-list.png);
+                    background-repeat: no-repeat;
+                    color: $text-color;
+                    width: 26px;
+                    height: 26px;
+                    display: inline-block;
+                    padding: 3px 26px 0 9px;
+                    margin-left: 80px;
+                }
+                .copy {
+                    margin: 10px 0 10px 80px;
+                    background: rgba(255,255,255,.4);
+                    width: 327px;
+                    border-radius: 3px;
+                    input {
+                        background: transparent;
+                        border: none;
+                        padding: 10px 8px;
+                        margin-left: 5px;
+                        width: 250px;
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                    .hover {
+                        background: $hover-color !important;
+                    }                    
+                    #copyButton {
+                        background: $blue;
+                        color: $text-color;
+                        border: none;
+                        width: 57px;
+                        height: 25px;
+                    }
+                }
+                .qrcode {
+                    margin-top: 0px;
+                    @media screen and (max-width: $small-screen) {
+                        margin-top: 0;
+                        width: 25%;
+                    }
+                }
+            }
+        } 
+    }
+    #pcClient {
+        background-image: url(#{$img}/bg-pcClient.jpg);
+        overflow: hidden;
+        .container-hl8 {
+            position: relative;
+            #section3bg {
+                background-image: url(#{$img}/pc.png);
+                position: absolute;
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 894px;
+                height: 541px;
+                top: 484px;
+                left: 50%;
+                margin-left: -447px;
+                display: none;
+                @media screen and (max-width: $small-imac-width) and (max-height: $small-height) {
+                    width: 50%;
+                    margin-left: -280px;
+                    top: 414px;
+                }
+                @media screen and (max-width: $small-screen) {
+                    width: 40%;
+                    top: 390px;
+                    margin-left: -360px;
+                }
+            }
+            .section3 {
+                width: 630px;
+                margin: 0 auto;
+                display: none;
+                padding-top: 166px;
+                @media screen and (max-width: $small-imac-width) and (max-height: $small-height) {
+                    padding-top: 105px;
+                    margin-left: 380px;
+                }
+                @media screen and (max-width: $small-screen) {
+                    padding-top: 110px;
+                    margin-left: 240px;
+                }
+                h2 {
+                    margin: 0;
+                    text-align: center;
+                    font-size: 42px;
+                    color: $text-color;
+                    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.39); 
+                }
+                .security-note {
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+                .app-details {
+                    margin-left: 186px;
+                    margin-bottom: 20px;
+                    p {
+                        color: $blue-2;
+                    }
+                }
+                .download-sites {
+                    display: inline-block;
+                    list-style: none;
+                    margin-left: 20px;
+                    margin-top: 20px;
+                    li {
+                        background-color: $text-color;
+                        background-image:  url(#{$img}/img-dl-cloud-blue.png);
+                        background-repeat: no-repeat;
+                        background-position-x: 16px;
+                        background-position-y: 13px;
+                        width: 148px;
+                        height: 43px;
+                        border-radius: 3px;
+                        float: left;
+                        margin: 0 10px;
+                        text-align: center;
+                        line-height: 41px;
+                        padding-left: 10px;
+                        cursor: pointer;
+                        a {
+                            text-decoration: none;
+                            color: black;
+                            cursor: pointer;
+                            &:hover {
+                                color: $blue-3;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #domainVer {
+        background-image: url(#{$img}/bg-domainVer.jpg);
+        overflow: hidden;
+        color: #000;
+        .container-hl8 {
+            position: relative;
+            #sectionDomainVerify {
+                display: none;
+                float: left;
+                width: 620px;
+                margin-left: 145px;
+                padding-top: 280px;
+                position: relative;  
+                @media screen and (max-width: $small-imac-width) and (max-height: $small-height) {
+                    padding-top: 130px;
+                }
+                @media screen and (max-width: $small-screen) {
+                    padding-top: 200px;
+                    margin-left: 50px;
+                }  
+                #box2, #box3 {
+                    background-color: #292c2f;
+                    margin-bottom: 15px;
+                    opacity: 0.98;    
+                    border-radius: 6px;
+                }
+                #box2 {
+                    padding: 25px 25px 20px 25px;
+                    position: relative;
+                    @media screen and (max-width: $small-screen) {
+                        margin-top: -60px;
+                    }
+                    #domaIn {
+                        height: 51px;
+                        background-color: #626971;
+                        padding: 0 0 0 20px;
+                        -moz-border-radius: 2px;
+                        -webkit-border-radius: 2px;
+                        border-radius: 2px;
+                        #domBar {
+                            display: inline;
+                            text-align: center;
+                            font-size: 14pt;
+                            color: $text-color;
+                            span {
+                                font-size: 18px;
+                                display: block;
+                                padding-right: 10px;
+                                line-height: 51px;
+                                height: 51px;
+                                float: left;
+                            }
+                            .searchbox {
+                                width: 65%;
+                                height: 31px;
+                                line-height: 31px;
+                                border: none;
+                                margin-top: 10px;
+                                float: left;
+                                color: #000;
+                            }
+                            .subBtn {
+                                border: none;
+                                width: 85px;
+                                height: 51px;
+                                font-size: 18px;
+                                color: $text-color;
+                                background-color: #2d5dbb;
+                                float: right;
+                                display: block;
+                                border-radius: 0 2px 2px 0;
+                                -moz-border-radius: 0 2px 2px 0;
+                                -webkit-border-radius: 0 2px 2px 0;
+                            }
+                        }
+                    }
+                    .hook {
+                        background: url(#{$img}/hanger.png) no-repeat center 0;
+                        background-size: contain;
+                        position: absolute;
+                        width: 300px;
+                        height: 135px;
+                        top: -116px;
+                        left: 168px; 
+                        @media screen and (max-width: $small-imac-width) and (max-height: $small-height) {
+                            top: -55px;
+                            height: 75px;
+                        }
+                        @media screen and (max-width: $small-screen) {
+                            top: -56px;
+                            height: 75px;
+                        }
+                    }       
+                    .topTxt {
+                        background: url(#{$img}/topTxtBG.png) no-repeat center 0;
+                        text-align: center;
+                        padding: 8px;
+                        color: $text-color;
+                        font-size: 14px;
+                        position: absolute;
+                        top: -36px;
+                        left: 0px;
+                        width: 600px;
+                        text-shadow: 1px 1px 2px #000;
+                    }
+                }
+                #box3 {
+                    padding: 25px 40px 20px 40px;
+                    position: relative;
+                    .hookbox {
+                        background: url(#{$img}/hook.png) no-repeat center 0;
+                        position: absolute;
+                        top: -35px;
+                        width: 600px;
+                        height: 100px;
+                    }
+                    .mainTtl {
+                        background: url(#{$img}/mainTtl.png) no-repeat center 0;
+                        padding-top: 40px;
+                        font-weight: normal;
+                        padding-bottom: 10px;
+                        p {
+                            line-height: 30px;
+                            height: 30px;
+                            color: $text-color;
+                            font-size: 14px;
+                            text-align: center;
+                            text-shadow: 1px 1px 2px #000;
+                        }
+                    }
+                    .refBox {
+                        width: 120px;
+                        margin: 0 auto;
+                        .ref_bnt {
+                            width: 120px;
+                            height: 38px;
+                            line-height: 38px;
+                            font-size: 16px;
+                            color: $text-color;
+                            vertical-align: middle;
+                            padding: 0 10px;
+                            background-color: $red;
+                            border: none;
+                            border-radius: 4px;
+                            cursor: pointer;
+                            margin: 15px auto 0;
+                            text-align: center;
+                        }
+                    }
+                    .wrapBar {
+                        clear: both;
+                        padding-left: 0;
+                        li {
+                            background-color: #626971;
+                            border: solid 1px;
+                            border-radius: 4px;
+                            padding: 10px 20px;
+                            height: 50px;
+                            margin-bottom: 5px;
+                            list-style: none;
+                            input {
+                                margin: 0;
+                                &.rateBox {
+                                    float: right;
+                                    width: 100px;
+                                    height: 32px;
+                                    line-height: 32px;
+                                    color: $text-color;
+                                    display: block;
+                                    background: #1269e9;
+                                    border: none;
+                                    border-radius: 4px;
+                                    font-size: 14px;
+                                    text-align: center;
+                                }
+                            }
+                            .icon_f {
+                                background: url(#{$img}/launchIcon.png) no-repeat 0 0;
+                                padding-left: 43px;
+                                width: 160px;
+                                cursor: pointer;
+                            }
+                            .idname {
+                                font-size: 14px;
+                                height: 32px;
+                                line-height: 32px;
+                                float: left;
+                                width: 193px;
+                                padding-left: 43px;
+                                a {
+                                    color: $text-color;
+                                }
+                                a:hover {
+                                    color: $hover-blue;
+                                    text-decoration: none;
+                                }
+                            }
+                            .starRate {
+                                padding-top: 8px;
+                                height: 25px;
+                                width: 35%;
+                                line-height: 32px;
+                                color: $text-color;  
+                                float: left;  
+                                label {
+                                    all: unset;
+                                }                                                             
+                                span {
+                                    background: url(#{$img}/starGreen.png) no-repeat 0 0;
+                                    width: 18px;
+                                    height: 18px;
+                                    display: block;
+                                    float: left;
+                                    margin-right: 1px;   
+                                }
+                                em {
+                                    background: url(#{$img}/starRed.png) no-repeat 0 0;
+                                    width: 18px;
+                                    height: 18px;
+                                    display: block;
+                                    float: left;
+                                    margin-right: 1px;                                    
+                                }
+                                p {
+                                    font-size: 11px;
+                                    float: left;
+                                    margin-left: 20px;
+                                    line-height: 18px;
+                                    color: $text-color;
+                                }
+                                b {
+                                    background: url(#{$img}/starBlue.png) no-repeat 0 0;
+                                    width: 18px;
+                                    height: 18px;
+                                    display: block;
+                                    float: left;
+                                    margin-right: 1px;
+                                }
+                                i {
+                                    background: url(#{$img}/starBlack.png) no-repeat 0 0;
+                                    width: 18px;
+                                    height: 18px;
+                                    display: block;
+                                    float: left;
+                                    margin-right: 1px;                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .section4 {
+                width: 400px;
+                margin-top: 325px;
+                margin-left: 26px;
+                display: none; 
+                @media screen and (max-width: $small-imac-width) and (max-height: $small-height) {
+                    margin-top: 150px;
+                }
+                @media screen and (max-width: $small-screen) {
+                    width: 340px;
+                    margin-top: 200px;
+                    margin-left: 10px;
+                }
+                h2 {
+                    margin-bottom: 17px;
+                    font-size: 42px;
+                    text-align: center;
+                    @media screen and (max-width: $small-screen) {
+                        font-size: 36px;
+                    }
+                }
+                .game-guide {
+                    margin-bottom: 32px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    display: block;
+                }
+                .domain-details {
+                    margin-bottom: 37px;
+                    margin-left: 125px;
+                    @media screen and (max-width: $small-screen) {
+                        margin-left: 50px;
+                    }
+                }
+                .cdl {
+                    display: inline-block;
+                    width: 189px;
+                    height: 50px;
+                    margin-left: 100px;
+                    background-image: url(#{$img}/btn-client-download.png);
+                    cursor: pointer;
+                    @media screen and (max-width: $small-screen) {
+                        margin-left: 80px;
+                    }
+
+                }
+                .cdl:hover {
+                    background-image: url(#{$img}/btn-client-download-hover.png);
+                    background-repeat: no-repeat;
+                    display: inline-block;
+                    cursor: pointer;                    
+                }
+            } 
+        }
+
+    }
+    #dns {
+        background-image: url(#{$img}/bg-dns.jpg);
+        overflow: hidden;
+        .container-hl8 {
+            position: relative;
+            .section5 {
+                display: inline-block;
+                text-align: center;
+                width: 610px;
+                padding-top: 166px;
+                margin-left: 100px;
+                color: #000;
+                text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.23); 
+                @media screen and (max-width: $small-screen) and (max-height: $small-height) {
+                    padding-top: 80px;
+                    margin-left: 20px;
+                }
+                @media screen and (max-height: $small-height) {
+                    padding-top: 100px;
+                }
+                h2 {
+                    margin-top: 0;
+                    margin-bottom: 22px;
+                    font-size: 48px;
+                }
+                h3 {
+                    font-size: 30px;
+                    margin-bottom: 23px;
+                    @media screen and (max-height: $small-height) {
+                        margin-top: 30px;
+                    }
+                }
+                .dns-tagline {
+                    margin-bottom: 30px;
+                }
+                .guidelines {
+                    text-align: center;
+                    span {
+                        height: 40px;
+                        display: inline-block;
+                        @media screen and (max-width: $small-screen) {
+                            height: 34px;
+                        }
+                        &:nth-child(1) {
+                            background-image: url(#{$img}/moji1.png);
+                            background-repeat: no-repeat;
+                            padding-left: 40px;
+                        }
+                        &:nth-child(3) {
+                            background-image: url(#{$img}/moji2.png);
+                            background-repeat: no-repeat;
+                            padding-left: 40px;
+                        }
+                        &:nth-child(5) {
+                            background-image: url(#{$img}/moji3.png);
+                            background-repeat: no-repeat;
+                            padding-left: 40px;
+                        }
+                        &:nth-child(7) {
+                            background-image: url(#{$img}/moji4.png);
+                            background-repeat: no-repeat;
+                            padding-left: 40px;
+                        }
+                        &:nth-child(9) {
+                            background-image: url(#{$img}/moji5.png);
+                            background-repeat: no-repeat;
+                            padding-left: 40px;
+                        }
+                    }
+                }
+                .dl-dns {
+                    display: block;
+                    width: 239px;
+                    height: 50px;
+                    background-image: url(#{$img}/btn-dnstool.png);
+                    background-repeat: no-repeat;
+                    margin: 10px auto 70px;
+                    &:hover {
+                        background-image: url(#{$img}/btn-dnstool-hover.png);
+                        background-repeat: no-repeat;
+                    }
+                    @media screen and (max-width: $small-screen) {
+                        margin-bottom: 0;
+                    }
+                    @media screen and (max-height: $small-height) {
+                        margin-top: 0;
+                        margin-bottom: 30px;
+                    }
+                }
+                .mobile-guidelines {
+                    margin-bottom: 22px;
+                }
+                .button {
+                    background-image: url(#{$img}/btn-download-main3.png);
+                    margin: 0 auto;
+                    .btn-left {
+                        margin-left: 0px;                        
+                    }
+                    .btn-right {
+                        margin-left: 1px;
+                    }            
+                } 
+            }
+        }
+    }
+    .navbar-hl8 {
+        background: $gray-alpha;
+        height: 68px;
+        font-size: $font-nav;
+        border-bottom: none;
+        position: fixed;
+        z-index: 10;
+        width: 100%;
+        .navbar-nav {
+            li {
+                margin-top: 9px;
+                padding-left: 10px;
+                padding-right: 10px;
+                a {
+                    color: $text-color;
+                    padding-bottom: 23px;
+                    &:active {
+                        color: $hover-color;
+                        background: transparent;
+                        border-bottom: 1px solid $hover-color;                        
+                    }
+                    &:hover {
+                        color: $hover-color;
+                        background: transparent;
+                        border-bottom: none;
+                    }
+                    &:focus {
+                        background: transparent;
+                    }
+                }
+                .active {
+                    color: $hover-color;
+                    background: transparent;
+                    border-bottom: 1px solid $hover-color;                    
+                }
+
+            }
+        }
+    }
+    .container-hl8 {
+        width: $main-width;
+        margin: 0 auto;
+        .navbar-brand {
+            margin-left: 132px;
+            padding-top: 11px;
+            @media screen and (max-width: $small-screen) {
+                margin-left: 40px;
+            }
+        }
+        .nav {
+            margin-right: 154px;
+            @media screen and (max-width: $small-screen) {
+                margin-right: 284px;
+            }
+        }
+    }
+    .tooltips {
+        position: absolute;
+        background-color: $gray-3;
+        border-radius: 6px;
+        padding: 30px;
+        h2 {
+            color: $text-color;
+            text-align: center;
+        }
+        ol {
+            padding: 0;
+            margin: 0;
+            margin-top: 20px;
+            display: table;
+            li {
+                all: unset;
+                counter-increment: item;
+                margin-bottom: 10px;
+                color: $text-color;
+                font-size: 14px;
+                line-height: 30px;
+                display: table-row;
+                list-style: none;
+                &::before {
+                    content: counter(item);
+                    background-image: url(#{$img}/bg-list.png);
+                    background-repeat: no-repeat;
+                    color: $text-color;
+                    width: 26px;
+                    height: 26px;
+                    text-align: center;
+                    display: table-cell;
+                    font-weight: bold;
+                    margin-right: 10px;
+                    padding-top: 5px;
+                    padding-right: 29px;
+                    padding-left: 9px;
+                    padding-bottom: 9px;
+                    background-position-y: 2px;                    
+                }
+                .highlight {
+                    color: $hover-color;
+                }
+            }
+        }
+        .notes {
+            color: $hover-color;
+            font-size: 12px;
+            margin-left: 50px;
+        }
+    }
+    #section1Android:before {
+        content: "";
+        background-image: url(#{$img}/tail-android.png);
+        background-repeat: no-repeat;
+        width: 56px;
+        height: 16px;
+        display: block;
+        margin-top: -46px;
+        margin-left: 73px;
+        @media screen and (max-width: $small-screen) {
+            margin-left: 150px;
+        }
+    }
+    #section1Android {
+        margin-top: 14px;
+        top: 107px;
+        width: 512px;
+        display: none;
+        @media screen and (max-width: $small-screen) {
+            right: -20px;
+            top: 106px;
+        }
+        li {
+            line-height: 20px;
+        }
+    }
+    #section1iPhone:before {
+        content: "";
+        background-image: url(#{$img}/tail-iPhone.png);
+        background-repeat: no-repeat;
+        width: 56px;
+        height: 16px;
+        display: block;
+        margin-top: -46px;
+        margin-left: 250px;
+        @media screen and (max-width: $small-screen) {
+            margin-left: 320px;
+        }
+    }
+    #section1iPhone {
+        margin-top: 14px;
+        top: 107px;
+        right: -70px;
+        width: 512px;
+        display: none;  
+        @media screen and (max-width: $small-screen) {
+            right: -20px;
+            top: 106px;
+        }
+        li {
+            line-height: 20px;
+        }      
+    }
+
+    #section2Android {
+        width: 580px;
+        top: 317px;
+        left: 150px;
+        display: none;
+        @media screen and (max-width: $small-imac-width) and (max-height: $small-height) {
+            top: 236px;
+        }
+        @media screen and (max-width: $small-screen) {
+            top: 180px;
+            left: 50px;
+        }
+        h3 {
+            color: $text-color;
+            text-align: center;
+            margin-left: 0 !important;
+            margin-top: 0 !important;
+        }
+    }
+
+    #section2iPhone {
+        width: 580px;
+        top: 340px;
+        left: 140px;
+        display: none;
+        @media screen and (max-width: $small-imac-width) and (max-height: $small-height) {
+            top: 259px;
+        }
+        @media screen and (max-width: $small-screen) {
+            top: 202px;
+        }
+        h3 {
+            color: $text-color;
+            text-align: center;
+            margin-left: 0 !important;
+            margin-top: 0 !important;
+        }
+    }
+
+    #section2Android:after {
+        content: "";
+        background-image: url(#{$img}/tail-android-bottom.png);
+        background-repeat: no-repeat;
+        width: 56px;
+        height: 16px;
+        display: block;
+        margin-top: 30px;
+        margin-left: 80px;
+        position: absolute;
+        @media screen and (max-width: $small-screen) {
+            margin-left: 85px;
+        }
+    }
+
+    #section2iPhone:after {
+        content: "";
+        background-image: url(#{$img}/tail-android-bottom.png);
+        background-repeat: no-repeat;
+        width: 56px;
+        height: 16px;
+        display: block;
+        margin-top: 30px;
+        margin-left: 220px;
+        position: absolute;
+        @media screen and (max-width: $small-screen) {
+            margin-left: 150px;
+        }
+    }
+
+    #section5Android {
+        width: 1000px;
+        top: 303px;
+        left: 150px;
+        display: none;
+        @media screen and (max-width: $small-imac-width) and (max-height: $small-height) {
+            top: 197px;
+        }
+        @media screen and (max-width: $small-screen) {
+            top: 167px;
+            left: 10px;
+        }
+    }
+
+    #section5Android:after {
+        content: "";
+        background-image: url(#{$img}/tail-android-bottom.png);
+        background-repeat: no-repeat;
+        width: 56px;
+        height: 16px;
+        display: block;
+        margin-top: 30px;
+        margin-left: 120px;
+        position: absolute;  
+        @media screen and (max-width: $small-screen) {
+            margin-left: 150px;
+        }      
+    }
+
+    #section5iPhone {
+        width: 1000px;
+        top: 300px;
+        left: 160px;
+        display: none;
+        @media screen and (max-width: $small-imac-width) and (max-height: $small-height) {
+            top: 194px;
+        }
+        @media screen and (max-width: $small-screen) {
+            top: 164px;
+            left: 10px;
+        }
+    }    
+
+    #section5iPhone:after {
+        content: "";
+        background-image: url(#{$img}/tail-android-bottom.png);
+        background-repeat: no-repeat;
+        width: 56px;
+        height: 16px;
+        display: block;
+        margin-top: 30px;
+        margin-left: 300px;
+        position: absolute;
+        @media screen and (max-width: $small-screen) {
+            margin-left: 320px;
+        }
+    }
+    .nav-arrow {
+        .next {
+            background-image: url(#{$img}/arrow-down.png);
+            background-size: contain;
+            width: 81px;
+            height: 46px;
+            bottom: 20px;
+            position: fixed;
+            z-index: 99;
+            margin-left: 50%;
+            animation-duration: 3s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+       }
+    }
+}
