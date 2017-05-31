@@ -1,0 +1,304 @@
+$gray-light: #696969;
+$gray-dark: #333333;
+$gray-darker: #252526;
+$gray-darkest: #1e1e1e;
+$hover-color: #16a085;
+$red: #e03046;
+$yellow: #ffde00;
+$muted-blue: #135c9f;
+$text-color: #ffffff;
+$img: "../img";
+$browser-height: calc(100vh - 166px);
+$ip5-width: 320px;
+$ip5-height: 568px;
+$ip6-width: 375px;
+$ip6plus-width: 414px;
+
+body {
+    background: #ffffff;
+    padding: 0;
+    margin: 0 auto;
+    font-family: 'Microsoft Yahei';
+    width: 375px; //default iPhone 6 width
+    @media screen and (max-width: $ip6plus-width) {
+        width: 100%;
+    }
+    header{
+        background: url(#{$img}/header-bg.jpg) no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 160px;
+        color: $text-color;
+        .brand {
+            padding-top: 30px;
+            img {
+                width: 40%;
+                display: block;
+                text-align: center;
+                margin: 0 auto;
+            }
+        }
+        p {
+            margin: 8px 0 0 31px;
+            padding-top: 20px;
+            font-weight: lighter;
+        }
+        .primary {
+            font-size: 20px;
+        }
+        .red {
+            color: $red;
+        }
+        .instruction {
+            font-size: 12px;
+        }
+        
+        &.ip5header {
+            height: 130px;
+            p {
+                padding-top: 8px;
+            }
+        }
+        &.galaxys5header {
+            height: 160px;
+            .brand {
+                padding-top: 41px;
+            }
+            p {
+                padding-top: 20px;
+                font-weight: lighter;
+            }
+        }
+        &.ip6plusheader {
+            height: 160px;
+        }
+        &.nexusheader {
+            height: 160px;
+            .brand {
+                img {
+                    width: 38%;
+                }
+                padding-top: 35px;
+            }
+            p {
+                padding-top: 21px;
+            }
+        }
+        &.ip6header {
+            height: 160px;
+            .brand {
+                padding-top: 38px;
+                p {
+                    padding-top: 20px;
+                }
+            }
+        }
+        &.ip6plusheader {
+            .brand {
+                padding-top: 37px;
+                img {
+                    width: 37%;
+                }
+                p {
+                    padding-top: 20px;
+                }
+            }
+        }
+    }
+
+    #main {        
+        margin: 0 auto;
+        background: url(#{$img}/body-bg.jpg) no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: auto !important;
+        padding: 25px 15px 38px;
+        &.ip5main {
+            padding-top: 15px !important;
+            height: 438px !important;
+            .login {
+                line-height: 50px;
+            }
+            .cs {
+                margin-top: -6px;
+            }
+        }
+        &.galaxys5main {
+            height: 480px !important;
+            padding-top: 30px;
+            .nosee {
+                font-size: 14px;
+            }
+        }
+        &.nexusmain {
+            height: 572px !important;
+            padding-top: 30px;
+            .nosee {
+                font-size: 17px;
+            }
+        }
+        &.ip6main {
+            height: 507px !important;
+            padding-top: 30px;
+        }
+
+        &.ip6plusmain {
+            height: 576px !important;
+            padding-top: 30px;
+        }
+
+        .form-control {
+            border: none;
+        }
+
+        input[required] + label {
+            color: $gray-light;
+            font-weight: 200;
+            position: relative;
+            top: -28px;
+            left: 11px;
+        }
+
+        input[required] + label:after {
+            content: '*';
+            color: $red;
+        }
+
+        small {
+            display: block;
+            margin-top: -20px;
+            font-size: 80%;
+        }
+
+        .text-muted {
+            color: $muted-blue;
+        }
+
+        .captcha {
+            padding-right: 8px;
+        }
+
+        .cap-img {
+            padding: 0;
+            margin-top: 3px;
+            width: 63px;
+            height: 29px;
+            background-size: cover;
+        }
+
+        .nosee {
+            padding-left: 8px;
+            color: $yellow;
+            font-size: 15px;
+            line-height: 30px;
+            font-weight: lighter;
+            @media screen and (max-width: $ip5-width) {
+                font-size: 12px;
+            }
+        }
+
+        .submit {
+            margin: -15px auto 0 auto;
+            background: url(#{$img}/btn-submit.png) no-repeat;
+            background-size: contain;
+            width: 200px;
+            height: 47px;
+            text-align: center;
+            display: block;
+            cursor: pointer;
+            color: $text-color;
+            font-size: 23px;
+        }  
+
+        .login {
+            color: $text-color;
+            line-height: 60px;
+            font-weight: lighter;
+            font-size: 15px;
+            a {
+                color: $yellow;
+            }
+        }
+
+        .cs {
+            p {
+                img {
+                    background-size: contain;
+                    width: 30px;
+                    height: 31px;
+                }
+                a {
+                    color: $text-color;
+                    margin-left: 7px;
+                    font-size: 11px;
+                    font-weight: lighter;
+                }
+            }
+        }      
+        
+        .sidebar {
+            background: $gray-dark;
+            float: left; 
+            width: 25%;
+            h3 {
+                margin: 0;
+                color: $text-color;
+            }
+            ul {
+
+            }
+            li {
+                list-style: none;
+            }
+            a { 
+                color: $text-color;
+                text-decoration: none;
+            }
+            a:hover {
+                color: $hover-color;
+            }
+        }
+
+        .content {
+            background: $gray-darker;
+            float: left;
+            width: 70%;
+            padding: 20px;
+            h2 {
+                margin: 0;
+                text-align: center;
+            }
+            p {
+                color: $gray-light;
+                line-height: 2em;
+            }
+        }
+    }
+
+    footer {
+        clear: both;
+        text-align: center;
+        width: 80%;
+        padding: 10px 0;
+        nav {
+            ul {
+                
+            }
+            li {
+                list-style: none;
+                display: inline-block;
+                margin: 0 20px;                
+            }
+            a {
+                color: $gray-dark;
+                text-decoration: none;
+            }
+            a:hover {
+                color: $text-color;
+            }
+        }
+    }
+    
+}
+
+
